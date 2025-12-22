@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load navactive %}
+{% load corp_list %}
+
+{% url 'accounting:default_dashboard' as url_index %}
+{% navactive request 'accounting:default_dashboard' as navactive_index %}
+{% translate "My Account" as l10n_index %}
+{% include "accounting/partials/navigation/navigation-item.html" with url=url_index navactive=navactive_index title=l10n_index %}
+
+
+{% corp_list %}
+
+{% block extra_javascript %}
+{% endblock %}

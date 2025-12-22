@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AA Accounting 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/astrum-mechanica/aa-accounting/issues\n"
+"POT-Creation-Date: 2025-12-22 16:44-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+#: accounting/__init__.py:8 accounting/templates/accounting/base.html:4
+#: accounting/templates/accounting/base.html:7
+msgid "Accounting"
+msgstr ""
+
+#: accounting/models/accounting.py:30
+msgid "Can access the Accounting app"
+msgstr ""
+
+#: accounting/models/accounting.py:32
+msgid "Can view own corp"
+msgstr ""
+
+#: accounting/models/accounting.py:34
+msgid "Can view all characters and corps"
+msgstr ""
+
+#: accounting/models/accounting.py:36
+msgid "Can view everything, plus submit bills/invoices"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:12
+msgid "Total Outstanding"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:20
+msgid "Total Unclaimed"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:30
+msgid "Outstanding"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:34
+msgid "Name"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:35
+#: accounting/templates/accounting/admin-dashboard.html:58
+#: accounting/templates/accounting/dashboard.html:93
+msgid "Amount"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:36
+msgid "Days Outstanding"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:53
+msgid "Unclaimed Items"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:57
+#: accounting/templates/accounting/partials/modals/pay-modal.html:15
+msgid "Character"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:59
+msgid "Notes"
+msgstr ""
+
+#: accounting/templates/accounting/admin-dashboard.html:60
+msgid "Date"
+msgstr ""
+
+#: accounting/templates/accounting/dashboard.html:91
+msgid "EVE Time"
+msgstr ""
+
+#: accounting/templates/accounting/dashboard.html:92
+msgid "Type"
+msgstr ""
+
+#: accounting/templates/accounting/dashboard.html:94
+msgid "Balance"
+msgstr ""
+
+#: accounting/templates/accounting/dashboard.html:95
+#: accounting/templates/accounting/dashboard.html:113
+msgid "Description"
+msgstr ""
+
+#: accounting/templates/accounting/partials/common/spinner.html:8
+msgid "Loading …"
+msgstr ""
+
+#: accounting/templates/accounting/partials/modals/pay-modal.html:6
+msgid "How to Make a Payment"
+msgstr ""
+
+#: accounting/templates/accounting/partials/modals/pay-modal.html:20
+msgid "Corporation"
+msgstr ""
+
+#: accounting/templates/accounting/partials/modals/pay-modal.html:48
+msgid "Close"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/corp-list.html:7
+msgid "My Corporation"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/corp-list.html:13
+msgid "My Corporations"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/left-navigation.html:7
+msgid "My Account"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/right-navigation.html:7
+msgid "Admin"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/right-navigation.html:13
+msgid "Dashboard"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/right-navigation.html:19
+msgid "Corporations"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/right-navigation.html:25
+msgid "Characters"
+msgstr ""
+
+#: accounting/templates/accounting/partials/navigation/right-navigation.html:32
+msgid "Manual Transactions"
+msgstr ""

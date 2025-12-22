@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load navactive %}
+
+{% if perms.accounting.view_all || perms.accounting.finance_manager %}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% translate "Admin" %}
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item"
+                    href="{% url 'accounting:admin_dashboard' %}">
+                    {% translate "Dashboard" %}
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item"
+                    href="{% url 'accounting:admin_corporations' %}">
+                    {% translate "Corporations" %}
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item"
+                    href="{% url 'accounting:admin_characters' %}">
+                    {% translate "Characters" %}
+                </a>
+            </li>
+            {% if perms.accounting.finance_manager %}
+                <li>
+                    <a class="dropdown-item"
+                        href="{% url 'accounting:admin_manual' %}">
+                        {% translate "Manual Transactions" %}
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </li>
+{% endif %}

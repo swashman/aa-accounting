@@ -1,0 +1,17 @@
+*.log
+*.tmp
+*.bak
+*.old
+__pycache__
+node_modules/
+.vscode/
+.idea/
+dist/
+build/
+venv/
+*.egg-info/
+.coverage
+coverage.xml
+.tox/
+.esi-compatibility-date
+alliance_auth.sqlite3

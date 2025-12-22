@@ -1,0 +1,52 @@
+<!-- Tabbed Modal -->
+<div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="guideModalLabel">{% translate "How to Make a Payment" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs mb-3" id="guideTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="character-tab" data-bs-toggle="tab" data-bs-target="#character" type="button" role="tab">
+                            {% translate "Character" %}
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="corp-tab" data-bs-toggle="tab" data-bs-target="#corporation" type="button" role="tab">
+                            {% translate "Corporation" %}
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tabs Content -->
+                <div class="tab-content" id="guideTabContent">
+                    <!-- Character Instructions -->
+                    <div class="tab-pane fade show active" id="character" role="tabpanel">
+                        <p>Step 1: Log in as your character.</p>
+                        <p>Step 2: Go to the payments section.</p>
+                        <p>Step 3: Select the correct corporation and enter the amount.</p>
+                        <p>Step 4: Confirm payment and wait for ledger update.</p>
+                        <!-- Add images/screenshots here -->
+                    </div>
+
+                    <!-- Corporation Instructions -->
+                    <div class="tab-pane fade" id="corporation" role="tabpanel">
+                        <p>Step 1: Log in as the corporation CEO or director.</p>
+                        <p>Step 2: Select the corporate wallet for payment.</p>
+                        <p>Step 3: Enter amounts for taxes or bills owed.</p>
+                        <p>Step 4: Confirm payment and wait for ledger update.</p>
+                        <!-- Add images/screenshots here -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% translate "Close" %}</button>
+            </div>
+        </div>
+    </div>
+</div>

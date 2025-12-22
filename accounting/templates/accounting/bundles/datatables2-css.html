@@ -1,0 +1,7 @@
+{% load sri %}
+
+{% sri_static "accounting/libs/DataTables/dataTables.bootstrap5.min.css" %}
+
+{% if extColumnControl == True %}
+    {% sri_static "accounting/libs/DataTables/Extensions/ColumnControl/css/columnControl.bootstrap5.min.css" %}
+{% endif %}

@@ -1,0 +1,17 @@
+{% extends 'accounting/base.html' %}
+{% load i18n %}
+{% load humanize %}
+{% load evelinks %}
+
+{% block details %}
+    Admin Corporations
+{% endblock %}
+
+{% block extra_javascript %}
+    {% include "accounting/bundles/datatables2-js.html"%}
+    {% include "bundles/moment-js.html" with locale=True %}
+{% endblock %}
+
+{% block extra_css %}
+    {% include "accounting/bundles/datatables2-css.html"%}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load navactive %}
+{% if corps %}
+    {% if corps|length == 1 %}
+        <li class="nav-item">
+            <a class="nav-link {% navactive request 'accounting:corporation_dashboard' %}" href="{% url 'accounting:corporation_dashboard' corps.0.corporation_id %}">
+                {% translate "My Corporation" %}
+            </a>
+        </li>
+    {% else %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {% translate "My Corporations" %}
+            </a>
+            <ul class="dropdown-menu">
+                {% for corp in corps %}
+                    <li>
+                        <a class="dropdown-item"
+                            href="{% url 'accounting:corporation_dashboard' corp.corporation_id %}">
+                            {{ corp.corporation_name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endif %}
+
+{% endif %}

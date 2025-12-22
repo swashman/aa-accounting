@@ -54,23 +54,23 @@ Easiest is to just find & replace `accounting` `aa-accounting` `accounting` or v
 
 One small warning about picking names: Python is a bit particular about what special characters are allowed for names of modules and packages. To avoid any pitfalls I would therefore recommend to use only normal characters (a-z) in your app's name unless you know exactly what you are doing.
 
-| Location                                              | Description                                                                            |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `/accounting/`                                    | folder name                                                                            |
+| Location                                      | Description                                                                            |
+| --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `/accounting/`                                | folder name                                                                            |
 | `/accounting/templates/accounting/`           | folder name                                                                            |
-| `/pyproject.toml`                                     | update module name for version import, update package name, update title, author, etc. |
-| `/accounting/apps.py`                             | app name                                                                               |
-| `/accounting/__init__.py`                         | app name                                                                               |
-| `/accounting/auth_hooks.py`                       | menu hook config incl. icon and label of your app's menu item appearing in the sidebar |
-| `/accounting/models.py`                           | app name                                                                               |
-| `/accounting/urls.py`                             | app name                                                                               |
-| `/accounting/views.py`                            | permission name and template path                                                      |
+| `/pyproject.toml`                             | update module name for version import, update package name, update title, author, etc. |
+| `/accounting/apps.py`                         | app name                                                                               |
+| `/accounting/__init__.py`                     | app name                                                                               |
+| `/accounting/auth_hooks.py`                   | menu hook config incl. icon and label of your app's menu item appearing in the sidebar |
+| `/accounting/models.py`                       | app name                                                                               |
+| `/accounting/urls.py`                         | app name                                                                               |
+| `/accounting/views.py`                        | permission name and template path                                                      |
 | `/accounting/templates/accounting/base.html`  | Title of your app to be shown in all views and as title in the browser tab             |
 | `/accounting/templates/accounting/index.html` | template path                                                                          |
-| `/testauth/settings/local.py`                         | app name                                                                               |
-| `/.coveragerc`                                        | app name                                                                               |
-| `/README.md`                                          | clear content                                                                          |
-| `/tox.ini`                                            | app name                                                                               |
+| `/testauth/settings/local.py`                 | app name                                                                               |
+| `/.coveragerc`                                | app name                                                                               |
+| `/README.md`                                  | clear content                                                                          |
+| `/tox.ini`                                    | app name                                                                               |
 
 ## Installing into your dev AA
 

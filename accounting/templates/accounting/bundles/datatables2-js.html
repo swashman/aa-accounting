@@ -1,0 +1,9 @@
+{% load sri %}
+
+{% sri_static 'accounting/libs/DataTables/dataTables.min.js' %}
+{% sri_static 'accounting/libs/DataTables/dataTables.bootstrap5.min.js' %}
+
+{% if extColumnControl == True %}
+    {% sri_static "accounting/libs/DataTables/Extensions/ColumnControl/js/dataTables.columnControl.min.js" %}
+    {% sri_static "accounting/libs/DataTables/Extensions/ColumnControl/js/columnControl.bootstrap5.min.js" %}
+{% endif %}
