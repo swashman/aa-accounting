@@ -11,7 +11,7 @@ license = { file = "LICENSE" }
 authors = [
     { name = "Swashman(John Nelson)", email = "jnelson2288@gmail.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.14"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
@@ -25,13 +25,12 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
-    "Programming Language :: Python :: 3.14",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dynamic = [ "description", "version" ]
 dependencies = [
-    "allianceauth>=4.11.2,<5",
+    "allianceauth>=4.9,<5",
 ]
 optional-dependencies.test = [
 ]
