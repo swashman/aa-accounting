@@ -1121,7 +1121,9 @@ class CorporatePayoutTaxRecord(models.Model):
 
 class CharacterPayoutTaxRecord(models.Model):
     entry = models.OneToOneField(
-        CharacterWalletJournalEntry, on_delete=models.CASCADE, related_name="taxed"
+        CharacterWalletJournalEntry,
+        on_delete=models.CASCADE,
+        related_name="character_payout_tax_record",
     )
 
     processed = models.BooleanField(default=True)
