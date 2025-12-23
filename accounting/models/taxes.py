@@ -1111,7 +1111,7 @@ class CorporatePayoutTaxRecord(models.Model):
     entry = models.OneToOneField(
         CorporationWalletJournalEntry,
         on_delete=models.CASCADE,
-        related_name="taxed",
+        related_name="corp_payout_tax_record",
         related_query_name="corp_taxed",
     )
 
