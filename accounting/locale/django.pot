@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: AA Accounting 0.1.1b2\n"
+"Project-Id-Version: AA Accounting 0.1.1b3\n"
 "Report-Msgid-Bugs-To: https://github.com/astrum-mechanica/aa-accounting/issues\n"
-"POT-Creation-Date: 2025-12-23 17:19-0500\n"
+"POT-Creation-Date: 2025-12-23 17:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
