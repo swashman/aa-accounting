@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AA Accounting 0.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/astrum-mechanica/aa-accounting/issues\n"
-"POT-Creation-Date: 2025-12-22 16:16-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-23 17:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: accounting/__init__.py:8 accounting/templates/accounting/base.html:4
 #: accounting/templates/accounting/base.html:7
 msgid "Accounting"

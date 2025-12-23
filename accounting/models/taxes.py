@@ -70,8 +70,14 @@ class TaxBase:
 
 
 class TaxBaseMixin:
+    """
+    Mixin to provide tax base calculation.
+    """
 
     def calculate_tax_due(self, gross: Decimal, net: Decimal, tax_rate: Decimal):
+        """
+        Calculate tax due.
+        """
         corp_tax = gross - net
 
         if self.tax_base == TaxBase.CORP_TAX:
@@ -83,13 +89,20 @@ class TaxBaseMixin:
 
 
 class CharacterRattingTaxConfiguration(models.Model):
+    """Character ratting tax configuration."""
+
     name = models.CharField(max_length=50)
 
     tax = models.DecimalField(max_digits=5, decimal_places=2, default=5.0)
 
     include_ess_section = models.BooleanField(default=True)
 
-    region_filter = models.ManyToManyField(MapRegion, blank=True)
+    region_filter = models.ManyToManyField(
+        MapRegion,
+        blank=True,
+        related_name="character_ratting_tax_regions",
+        help_text="Regions to limit this tax to.",
+    )
 
     class Meta:
         verbose_name = "Tax: Character Ratting"
@@ -265,6 +278,8 @@ class CharacterRattingTaxConfiguration(models.Model):
 
 
 class CharacterPayoutTaxConfiguration(models.Model):
+    """Character payout tax configuration."""
+
     name = models.CharField(max_length=50)
 
     corporation = models.ForeignKey(
@@ -274,6 +289,7 @@ class CharacterPayoutTaxConfiguration(models.Model):
         blank=True,
         null=True,
         default=None,
+        related_name="character_tax_corp",
         help_text="Corporation that sent isk to character, Blank for Any Corporation",
     )
 
@@ -460,7 +476,11 @@ class CharacterPayoutTaxConfiguration(models.Model):
 
 # CorpTaxChangeMsg
 class CorpTaxHistory(models.Model):
-    corp = models.ForeignKey(EveCorporationInfo, on_delete=models.CASCADE)
+    """Corporation Tax History Model."""
+
+    corp = models.ForeignKey(
+        EveCorporationInfo, on_delete=models.CASCADE, related_name="tax_history"
+    )
     start_date = models.DateTimeField()
     tax_rate = models.DecimalField(max_digits=5, decimal_places=2, default=5.0)
 
@@ -507,6 +527,8 @@ class CorpTaxHistory(models.Model):
 
 
 class CorpTaxPayoutTaxConfiguration(models.Model):
+    """Corporation payout tax configuration."""
+
     name = models.CharField(max_length=50)
 
     corporation = models.ForeignKey(
@@ -516,6 +538,7 @@ class CorpTaxPayoutTaxConfiguration(models.Model):
         blank=True,
         null=True,
         default=None,
+        related_name="tax_corp_payout",
         help_text="Corporation that sent isk to character, Blank for Any Corporation",
     )
 
@@ -628,6 +651,7 @@ class CorpTaxPerMemberTaxConfiguration(models.Model):
         State,
         on_delete=models.CASCADE,
         help_text="State to assign this member tax rate to.",
+        related_name="corp_member_tax_state",
     )
 
     isk_per_main = models.IntegerField(default=20000000)
@@ -712,11 +736,17 @@ class CorpTaxPerServiceModuleConfiguration(models.Model):
     )
 
     structure_type_filter = models.ManyToManyField(
-        EveItemType, limit_choices_to={"group__category_id": 65}, blank=True
+        EveItemType,
+        limit_choices_to={"group__category_id": 65},
+        blank=True,
+        related_name="corp_structure_type_tax_structures",
     )
 
     region_filter = models.ManyToManyField(
-        MapRegion, blank=True, help_text="Regions to limit this tax to."
+        MapRegion,
+        blank=True,
+        help_text="Regions to limit this tax to.",
+        related_name="corp_structure_service_tax_regions",
     )
 
     def __str__(self) -> str:
@@ -842,9 +872,16 @@ class CorpTaxConfiguration(models.Model):
         CorpTaxPerServiceModuleConfiguration, blank=True
     )
 
-    exempted_corps = models.ManyToManyField(EveCorporationInfo, blank=True)
+    exempted_corps = models.ManyToManyField(
+        EveCorporationInfo, blank=True, related_name="corp_tax_exempted_corps"
+    )
 
-    included_alliances = models.ManyToManyField(EveAllianceInfo, blank=True)
+    included_alliances = models.ManyToManyField(
+        EveAllianceInfo,
+        blank=True,
+        related_name="corp_tax_included_alliances",
+        help_text="Only include corporations in these alliances. Leave blank to include all.",
+    )
 
     def __str__(self) -> str:
         return f"{self.Name}"
@@ -1072,7 +1109,10 @@ class CorpTaxConfiguration(models.Model):
 
 class CorporatePayoutTaxRecord(models.Model):
     entry = models.OneToOneField(
-        CorporationWalletJournalEntry, on_delete=models.CASCADE, related_name="taxed"
+        CorporationWalletJournalEntry,
+        on_delete=models.CASCADE,
+        related_name="taxed",
+        related_query_name="corp_taxed",
     )
 
     processed = models.BooleanField(default=True)
