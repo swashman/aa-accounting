@@ -3,7 +3,7 @@
 # Django
 from django.utils.translation import gettext_lazy as _
 
-__version__ = "0.1.1b7"
+__version__ = "0.1.1b8"
 __title__ = "Accounting"
 __title_translated__ = _("Accounting")
 
