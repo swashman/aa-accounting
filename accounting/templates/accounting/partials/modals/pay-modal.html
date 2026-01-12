@@ -27,19 +27,25 @@
                 <div class="tab-content" id="guideTabContent">
                     <!-- Character Instructions -->
                     <div class="tab-pane fade show active" id="character" role="tabpanel">
-                        <p>Step 1: Log in as your character.</p>
-                        <p>Step 2: Go to the payments section.</p>
-                        <p>Step 3: Select the correct corporation and enter the amount.</p>
-                        <p>Step 4: Confirm payment and wait for ledger update.</p>
+                        <p>To make a payment to your personal account, follow these steps:</p>
+                        <p>Step 1: Search for the payment corp in the search bar.</p>
+                        <p>Step 2: Right-click the corp and select "Give Money".</p>
+                        <p>Step 3: Enter the amount of isk you want to send.</p>
                         <!-- Add images/screenshots here -->
                     </div>
 
                     <!-- Corporation Instructions -->
                     <div class="tab-pane fade" id="corporation" role="tabpanel">
-                        <p>Step 1: Log in as the corporation CEO or director.</p>
-                        <p>Step 2: Select the corporate wallet for payment.</p>
-                        <p>Step 3: Enter amounts for taxes or bills owed.</p>
-                        <p>Step 4: Confirm payment and wait for ledger update.</p>
+                        <alert class="alert alert-warning" role="alert">
+                            {% translate "Payments must be made from a corporation wallet." %}
+                        </alert>
+                        <p>For making payments to a corporation account, follow these steps:</p>
+                        <p>Step 1: Open your wallet and go to the "Corporation Wallet" tab.</p>
+                        <p>Step 2: Ensure you have the corect division selected.</p>
+                        <p>Step 3: Click Transfer ISK</p>
+                        <p>Step 4: Search for the payment corp in the search bar.</p>
+                        <p>Step 5: Select the appropriate corp and click OK.</p>
+                        <p>Step 6: Enter the amount of isk you want to send.</p>
                         <!-- Add images/screenshots here -->
                     </div>
                 </div>
