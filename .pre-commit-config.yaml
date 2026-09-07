@@ -121,7 +121,7 @@ repos:
         description: Ensure that files end with a newline.
 
   - repo: https://github.com/eslint/eslint
-    rev: 1b4215f2b93d9946da409ae2cdd0b8f6b5c0e253  # frozen: v9.39.1
+    rev: dc663d5a979e788f6a914e601d36c615d94be6b4  # frozen: v10.10.0
     hooks:
       - id: eslint
         name: ESLint
@@ -133,7 +133,7 @@ repos:
           - globals@16.5.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: 5550a364f2b5d3a9e731a9f4e231c5dc8c5f2e5b  # frozen: v16.26.1
+    rev: d6d653746a0a510b098377a8919bea816eea3c09  # frozen: v17.15.0
     hooks:
       - id: stylelint
         name: Stylelint
@@ -174,14 +174,14 @@ repos:
         description: Enforce that python3.6+ type annotations are used instead of type comments.
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 11ea70506fd878d26129b2b87746fd1a1f6b561b  # frozen: 3.6.0
+    rev: e8b4e28241a9ae8296ba6e4a491b5da4eda73283  # frozen: 3.11.1
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: Check for compliance with the definitions in the EditorConfig file.
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 553731fe59437e0bd2cf18b10144116422bed259  # frozen: 1.29.1
+    rev: e668ea858b908d23a9702b24214f4fc5d07ed50f  # frozen: 1.32.0
     hooks:
       - id: django-upgrade
         name: Django upgrade
@@ -213,7 +213,7 @@ repos:
         description: Check for extraneous `# noqa` comments.
 
   - repo: https://github.com/PyCQA/isort
-    rev: 0a09c783808cfe77bb3269250f663ff733d23302  # frozen: 7.0.0
+    rev: 131f4adcd5582bfc53928ab0d740eceb8b506b6c  # frozen: 9.0.1
     hooks:
       - id: isort
         name: Isort
@@ -227,7 +227,7 @@ repos:
         description: Check for black disable comments.
 
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 2892f1f81088477370d4fbc56545c05d33d2493f  # frozen: 25.11.0
+    rev: 4160603246a6b365d4a2af661c6d71b0a0f50478  # frozen: 26.5.1
     hooks:
       - id: black
         name: Black
@@ -259,14 +259,14 @@ repos:
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/tox-dev/tox-ini-fmt
-    rev: be26ee0d710a48f7c1acc1291d84082036207bd3  # frozen: 1.7.0
+    rev: 241ced4140307006cfd8b2b9ccfd43b1139cfe4a  # frozen: 1.9.0
     hooks:
       - id: tox-ini-fmt
         name: tox.ini formatter
         description: Format the tox.ini file.
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: d252a2a7678b47d1f2eea2f6b846ddfdcd012759  # frozen: v2.11.1
+    rev: 3b42b9776870badc9eaffdef9a4a0834b764d87c  # frozen: v2.29.3
     hooks:
       - id: pyproject-fmt
         name: pyproject.toml formatter
@@ -277,14 +277,14 @@ repos:
           - tox==4.32.0  # https://github.com/tox-dev/tox/releases/latest
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: 78f5e0f104cfa803d0597eaa924b4de3becd3e3e  # frozen: v0.24.1
+    rev: 17e12779811926f000bdfa1795f9e3735dd71ac3  # frozen: 0.26
     hooks:
       - id: validate-pyproject
         name: Validate pyproject.toml
         description: Validate the pyproject.toml file.
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: e16f942166511d6fb4427e503a734152fae0c4fe  # frozen: v4.0.4
+    rev: 4e1125d0149c638ca073c3dc7f1648a5c9459a3d  # frozen: v4.0.8
     hooks:
       - id: pylint
         name: Pylint
@@ -294,7 +294,7 @@ repos:
           - --fail-under=8.0
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 16a6ad2fead09286ee6eb6b0a3fab55655a6c22a  # frozen: 0.35.0
+    rev: c4654a7e007c9619a5eb63c39a456572a0fa1851  # frozen: 0.38.0
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
